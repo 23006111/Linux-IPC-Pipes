@@ -134,4 +134,4 @@ prwxr-xr-x 1 gganesh gganesh 0 Sep 17 09:25 /tmp/my_fifo
 
 
 # RESULT:
-The program is executed successfully.
+The program was executed successfully.
