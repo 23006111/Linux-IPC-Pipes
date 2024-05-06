@@ -29,8 +29,8 @@ Testing the C Program for the desired output.
 
 ## C Program that illustrate communication between two process using unnamed pipes using Linux API system calls
 ~~~
-$ cat pipe1.c 
-#include<stdio.h>
+
+[6:43 pm, 6/5/2024] Ramya: #include<stdio.h>
 #include<stdlib.h>
 #include<sys/types.h> 
 #include<sys/stat.h> 
@@ -57,7 +57,6 @@ client(p1[1],p2[0]);
 wait(waits); 
 return 0; 
 } 
-
 void server(int rfd,int wfd) 
 { 
 int i,j,n; 
@@ -78,7 +77,7 @@ int i,j,n; char fname[2000];
 char buff[2000];
 printf("ENTER THE FILE NAME :");
 scanf("%s",fname);
-printf("CLIENT SENDING THE REQUEST .... PLEASE WAIT\n");
+[6:43 pm, 6/5/2024] Ramya: printf("CLIENT SENDING THE REQUEST .... PLEASE WAIT\n");
 sleep(10);
 write(wfd,fname,2000);
 n=read(rfd,buff,2000);
@@ -90,18 +89,9 @@ printf("THE RESULTS OF CLIENTS ARE ...... \n"); write(1,buff,n);
 
 
 ## OUTPUT
-~~~
-cat> hello.txt
-Hello world
-to check pipe
 
-$ ./pipe1.o 
-ENTER THE FILE NAME :hello.txt	
-CLIENT SENDING THE REQUEST .... PLEASE WAIT
-THE RESULTS OF CLIENTS ARE ...... 
-Hello world
-to check pipe
-~~~
+![3 ONE](https://github.com/23006111/Linux-IPC-Pipes/assets/145981696/3c62b5ab-520f-4a92-a65f-c3aaf3dafe4a)
+
 
 
 
@@ -122,14 +112,8 @@ exit(EXIT_SUCCESS);
 
 
 ## OUTPUT
-~~~
-$ ./fifo1.o 
-FIFO created
-
-$ ls -l /tmp/my_fifo 
-prwxr-xr-x 1 gganesh gganesh 0 Sep 17 09:25 /tmp/my_fifo
-~~~
-
+![3 second 1](https://github.com/23006111/Linux-IPC-Pipes/assets/145981696/a052c1fb-d4eb-45bc-9c5b-f39d2f14984f)
+![3 second 2](https://github.com/23006111/Linux-IPC-Pipes/assets/145981696/815ba4db-7723-4e53-b8c6-342b9f872642)
 
 
 
